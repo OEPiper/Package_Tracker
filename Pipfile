@@ -7,6 +7,11 @@ name = "pypi"
 python-dotenv = "*"
 jinja2 = "*"
 flask-wtf = "*"
+flask = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
+alembic = "*"
+flask-migrate = "*"
 
 [dev-packages]
 

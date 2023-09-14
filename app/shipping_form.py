@@ -4,7 +4,6 @@ from wtforms.validators import DataRequired
 from map.map import map
 
 choice = list(map)
-print(choice)
 class PackageForm(FlaskForm):
     sender = StringField("Sender", validators=[DataRequired()])
     recipient = StringField("Recipient", validators=[DataRequired()])
@@ -12,3 +11,5 @@ class PackageForm(FlaskForm):
     destination = SelectField("Destination", validators=[DataRequired()], choices=choice)
     express = BooleanField("Express", validators=[DataRequired()])
     submit = SubmitField("Create Package")
+
+    

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+</head>
+<body>
+    <h1>Package Tracker</h1>
+    <a href="/new_package">Ship a Package</a>
+    <h2>Packages in Transit</h2>
+    {% for package in packages %}
+        <p>ID: {{ package.id }}</p>
+        <p>Sender:{{ package.sender }}</p>
+        <p>Recipient: {{ package.recipient }}</p>
+        <p>From: {{ package.origin }}</p>
+        <p>To: {{ package.destination }}</p>
+        <p>Location: {{ package.location }}</p>
+    {% endfor %}
+</body>
+</html>
