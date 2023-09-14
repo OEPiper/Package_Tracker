@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping</title>
+  </head>
+  <body>
+    <div class="feed-container">
+      <h2>Shipping Form</h2>
+      <form action="/new_package" method="POST">
+        {{ form.csrf_token }}
+        <p>{{ form.sender.label }}: {{ form.sender }}</p>
+        <p>{{ form.recipient.label }}: {{ form.recipient }}</p>
+        <p>{{ form.origin.label }}: {{ form.origin }}</p>
+        <p>{{ form.destination.label }}: {{ form.destination }}</p>
+        <p>{{ form.express.label }}: {{ form.express }}</p>
+        <p>{{ form.submit }}</p>
+      </form>
+    </div>
+  </body>
+</html>
